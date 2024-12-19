@@ -8,6 +8,7 @@ const bcrypt = require('bcrypt')
 const jwt = require("jsonwebtoken")
 const path = require('path');
 const dotenv = require('dotenv');
+const mongoose = require('mongoose');
 // const { console } = require('inspector/promises');
 
 dotenv.config();
@@ -17,6 +18,10 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname ,"public")))
+
+mongoose.connect(process.env.MONGO_URI).then(() => {
+    console.log("connected to db");
+}).catch((err) => console.log(err));
 
 app.get('/' , (req,res)=>{
     res.render('index');
