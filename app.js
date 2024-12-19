@@ -9,7 +9,6 @@ const jwt = require("jsonwebtoken")
 const path = require('path');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-// const { console } = require('inspector/promises');
 
 dotenv.config();
 const PORT = process.env.PORT || 4000;
