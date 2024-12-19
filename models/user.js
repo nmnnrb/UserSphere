@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://nmnnrb:nmnnrb@socialmedia-a.3dv96.mongodb.net/?retryWrites=true&w=majority&appName=SocialMedia-a");
+mongoose.connect(MONGO_URI);
 
 const userSchema = mongoose.Schema({
     username: String,
