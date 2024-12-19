@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+// jdnd
 mongoose.connect(MONGO_URI);
 
 const userSchema = mongoose.Schema({
